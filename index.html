@@ -5,26 +5,126 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Train Activity</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="reset.css">
     <script src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+   
+<!-- <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Train Schedule</h1>
+    <p class="lead">Check the train schedule to find train times and destinations</p>
+  </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Train Time</th>
+      <th scope="col">Destination</th>
+      <th scope="col">Frequency (min.)</th>
+      <th scope="col">Next Arrival</th>
+      <th scope="col">Minutes Away</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>X</td>
+    </tr>
+  </tbody>
+</table> -->
+
+
+<div class="container">
+  <br>
+  <div class="jumbotron">
+      <h1 class="display-4">Train Schedule</h1>
+      <p class="lead">Check the train schedule for train times and destinations</p>
+      <hr class="my-4">
+  </div> 
+
+  <div class="card">
+      <div class="card-header">
+          Train Schedule
+      </div>
+      <div class="card-body" id="schedule-display">
+          <div class="row">
+              <div class="col-2" id="train-display">
+                  <h5 class="card-title">Train Name</h5>
+              </div>
+              <div class="col-2" id="depart-display">
+                  <h5 class="card-title">Departure City</h5>
+              </div>
+              <div class="col-2" id="destination-display">
+                  <h5 class="card-title">Destination City</h5>
+              </div>
+              <div class="col-2" id="frequency-display">
+                  <h5 class="card-title">Frequency</h5>
+              </div>
+              <div class="col-2" id="arrival-display">
+                  <h5 class="card-title">Next Arrival</h5>
+              </div>
+              <div class="col-2" id="minutes-display">
+                  <h5 class="card-title">Minutes Away</h5>
+              </div>
+              
+          </div> 
+          <hr>
+      </div> 
+  </div> 
+<br>
+<br>
+  <div class="card admin">
+      <div class="card-header">
+          Train Schedule
+      </div>
+      <div class="card-body">
+          <form>
+              <div class="form-group">
+                  <label for="train-name">Train Name</label>
+                  <input type="text" class="form-control" id="train-input" placeholder="Inbound">
+              </div>
+
+              <div class="form-group">
+                      <label for="depart-city">Departure City</label>
+                      <input type="text" class="form-control" id="depart-input" placeholder="The Burbs">
+                  </div>
+
+              <div class="form-group">
+                  <label for="dest-city">Destination City</label>
+                  <input type="text" class="form-control" id="destination-input" placeholder="Chicago">
+              </div>
+
+              <div class="form-group">
+                      <label for="first-input">First Departure</label>
+                      <input type="text" class="form-control" id="first-input" placeholder="Military Time">
+                  </div>
+              
+              <div class="form-group">
+                  <label for="frequency-input">Frequency</label>
+                  <input type="text" class="form-control" id="frequency-input" placeholder="In minutes">
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="form-submit">Submit</button>
+          </form>
+      </div> 
+      <br>
+
+  </div> 
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+   
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </head>
 <body>
 
 <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
-<script>
-    // Initialize Firebase
-    var config = {
-    apiKey: "AIzaSyChsI65j1XX9695eEe1cPk_qBt-owLspY0",
-    authDomain: "train-activity-hw7.firebaseapp.com",
-    databaseURL: "https://train-activity-hw7.firebaseio.com",
-    projectId: "train-activity-hw7",
-    storageBucket: "train-activity-hw7.appspot.com",
-    messagingSenderId: "1052435786785"
-      };
-    firebase.initializeApp(config);
-    </script>
-    
 
 </body>
 </html>
